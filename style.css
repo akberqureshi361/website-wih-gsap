@@ -1,0 +1,294 @@
+
+
+@font-face {
+    font-family: chana;
+    src: url(Fonts/chaney-ultraextended-webfont.ttf);
+}
+
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100vh;
+
+}
+#main{
+    width: 100%;
+    min-height: 100vh;
+}
+.loader{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(250,195,8);
+    animation: pulse 3s;
+
+}
+.zoom{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 13vw;
+    transform: translate( -50%, -50% ) rotate(-7deg);
+    font-family: chana;
+    -webkit-text-stroke-width: 0.09vh;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: #fff;
+  font-weight: 200;
+  outline: none;
+}
+.loader h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%) rotate(-7deg);
+    font-size: 5vw;
+    font-family: chana;
+    color: #fff;
+
+}
+.Loading{
+    position: relative;
+    width: 50%;
+    bottom: -65%;
+    left: 50%;
+    height: 10px;
+    background-color: #fff;
+    transform: translate(-50%,-50%) rotate(-7deg);
+    border-radius: 4px;
+    overflow: hidden;
+    display: inline-block;
+}
+.Loading:after {
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    height: 100%;
+    border-radius: 4px;
+    animation: load 3s;
+}
+
+@keyframes load{
+    0%{
+        width: 0%;
+        background-color: #a28089;
+    }
+    25%{
+        width: 25%;
+        background: #a0d2eb;
+      }
+    
+      50%{
+        width: 50%;
+        background: #d0bdf4;
+    }
+    75%{
+        width: 75%;
+        background: #d2d2d2;
+    }
+       
+    
+      100% {
+        width: 100%;
+        background: rgb(250,195,8);
+      }
+
+    }
+    @keyframes pulse {
+        0% {
+          background: #a28089;
+        }
+      
+        25% {
+          background: #a0d2eb;
+        }
+      
+        50% {
+          background: #d0bdf4;
+        }
+        
+      
+        75% {
+            background: #d2d2d2;
+        }
+        100% {
+            background: rgb(250, 195, 8);
+          }
+          
+    }
+
+
+
+  .svgwaala{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(images/back1.jpg);
+  background-size: cover;
+  background-position: bottom;
+  transition: all cubic-bezier( 0.19, 1, 0.22, 1) 1.5s;
+  overflow: hidden;
+  opacity: 0;
+  z-index: 99;
+
+  }
+
+
+  #dotted {
+    width: 130%;
+    height: 130vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(images/back.png);
+  background-size: cover;
+  background-position: center;
+  animation: dotte 8s ease-in-out alternate infinite;
+  overflow: hidden;
+opacity: 0;
+
+  }
+  @keyframes dotte {
+      from {
+        margin-top: -15%;
+        margin-left: -15%;
+      }
+  }
+  #dotted >img:nth-child(1){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    width: 13vw;
+    animation: updown 2s ease-in-out alternate infinite;
+    /* opacity: 0; */
+
+  }
+  @keyframes updown {
+    from {
+      margin-top: -1vw;
+    }
+    to {
+        margin-top: 1vw ;
+    }
+     
+}
+#kothik-k{
+  position: absolute;
+  top: 25%;
+  left: 39%;
+  width: 9vw;
+ 
+  animation: letter 1.8s ease-in-out alternate infinite;
+}
+#kothik-k2{
+  position: absolute;
+  top: 52%;
+  left: 39%;
+  width: 5vw;
+  animation: letter 1.9s ease-in-out alternate infinite;
+}
+
+#kothik-o{
+  position: absolute;
+  top: 25%;
+  left: 65%;
+  width: 7vw;
+  z-index: 2;
+  animation: letter 1.8s ease-in-out alternate infinite;
+}
+
+#kothik-t{
+  position: absolute;
+  top: 55%;
+  left: 64%;
+  width: 10vw;
+  /* z-index: 2; */
+  animation: letter 1.9s ease-in-out alternate infinite;
+}
+
+#kothik-h{
+  position: absolute;
+  top: 38%;
+  left: 68%;
+  width: 7vw;
+  /* z-index: 2; */
+  animation: letter 1.8s ease-in-out alternate infinite;
+}
+
+#kothik-i{
+  position: absolute;
+  top: 52%;
+  left: 39%;
+  width: 15vw;
+  z-index: 9;
+  animation: letter 1.9s ease-in-out alternate infinite;
+}
+@keyframes letter {
+  from {
+    margin-top: 0vw;
+  }
+  to {
+      margin-top: 1vw ;
+  }
+   
+}
+
+#explore{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 75.5%;
+  width: 7vw;
+  height: 2vw;
+  color: #ffff;
+  background-color: rgba(255, 255, 255, 0.45);
+  font-size: 0.45vw;
+  box-shadow: 0 8px 32px 0 rgba(229, 116, 45, 0.36);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  cursor: pointer;
+
+}
+
+#explore h1{
+  color: white;
+}
+
+/* video 3 ############# */
+#main-again{
+  width: 100%;
+  min-height: 100vh;
+
+}
+#nav{
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+}
+
+         
+         
+      
+      
+        
+    
+        
+      
+
+    
